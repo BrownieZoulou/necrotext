@@ -16,7 +16,7 @@ public class script_zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		transform.position = new Vector3(-12,-1,10);
+		
         offsetZpos = Random.Range(1f,3f);
 		offsetYpos = offsetZpos*-1;
 		vitesse = Random.Range(0.015f,0.020f);
