@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9191549218045800249}
   - component: {fileID: 9191549218045800253}
   - component: {fileID: 9191549218045800254}
+  - component: {fileID: 6138087151446152939}
   m_Layer: 0
   m_Name: paysan
   m_TagString: Humains
@@ -143,6 +144,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6138087151446152939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9191549218045800252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d0ae2ae803ce044b556ee8586543fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9191549219106245982
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,3 +226,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57eff0a96bce9c34d95abb14ee1c9e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownPaysan: 100

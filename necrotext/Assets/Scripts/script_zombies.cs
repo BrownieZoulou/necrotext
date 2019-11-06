@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_zombie : MonoBehaviour
+public class script_zombies : MonoBehaviour
 {
 	float vitesse;
 	float vitesseAtt;
@@ -16,7 +16,6 @@ public class script_zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		
         offsetZpos = Random.Range(1f,3f);
 		offsetYpos = offsetZpos*-1;
 		vitesse = Random.Range(0.015f,0.020f);
@@ -38,9 +37,9 @@ public class script_zombie : MonoBehaviour
 		if(other.gameObject.tag == "Humains"){
 			isFighting = true;
 			if(cooldown == 0){
-				Destroy(other.gameObject);
-				cooldown = 10;
+				other.gameObject.GetComponent<script_humains>().Die();
 			}
+			cooldown = 10;
 		}
 	}
 	
@@ -48,9 +47,9 @@ public class script_zombie : MonoBehaviour
 		if(other.gameObject.tag == "Humains"){
 			isFighting = true;
 			if(cooldown == 0){
-				other.gameObject.GetComponent<script_paysan>()	.die();
-				cooldown = 10;
+				other.gameObject.GetComponent<script_humains>().Die();
 			}
+			cooldown = 10;
 		}
 	}
 	
@@ -58,5 +57,9 @@ public class script_zombie : MonoBehaviour
 		if(other.gameObject.tag == "Humains"){
 			isFighting = false;
 		}
+	}
+	
+	public void Die(){
+		Destroy(this.gameObject);
 	}
 }

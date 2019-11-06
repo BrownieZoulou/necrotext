@@ -7,6 +7,7 @@ public class script_game : MonoBehaviour
 	
 	public GameObject zombie;
 	public GameObject paysan;
+	public GameObject archer;
 	
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,13 @@ public class script_game : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("AddZombie")==true){	
-			print("1");
 			Instantiate(zombie,new Vector3(-12,-1,10), Quaternion.identity);
 		}
 		if(Input.GetButtonDown("AddHuman")==true){
-			print("2");
 			Instantiate(paysan,new Vector3(12,-1,10),  Quaternion.identity);
+		}
+		if(Input.GetButtonDown("AddArcher")==true){
+			Instantiate(archer,new Vector3(12,-1,10),  Quaternion.identity);
 		}
     }
 }

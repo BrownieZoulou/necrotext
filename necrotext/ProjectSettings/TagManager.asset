@@ -7,6 +7,8 @@ TagManager:
   - Zombies
   - Humains
   - AttZone
+  - sol
+  - Fleche
   layers:
   - Default
   - TransparentFX

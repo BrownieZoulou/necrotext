@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class script_paysan : MonoBehaviour
+public class script_humains : MonoBehaviour
 {
-	float vitesse;
+	
+    float vitesse;
 	float offsetZpos;
 	float offsetYpos;
-	bool isFighting = false;
+	bool isFighting;
 	
 	
     // Start is called before the first frame update
@@ -27,12 +28,12 @@ public class script_paysan : MonoBehaviour
 		}
     }
 	
-	private void OnTriggerExit2D(Collider2D other){
-		isFighting = false;
+	public void Die(){
+		Destroy(this.gameObject);
 	}
 	
-	public void die(){
-		Destroy(this.gameObject);
+	private void OnTriggerExit2D(Collider2D other){
+		isFighting = false;
 	}
 	
 	public void enterCombat(){
